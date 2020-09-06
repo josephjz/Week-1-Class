@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var messageLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -17,6 +18,10 @@ class ViewController: UIViewController {
         // Date gives us prime meridian time, we will modify this to be more applicable later in the semester. Month and Day will come up normally, but time will look funky as is. 
     }
 
-
+    @IBAction func sayItButtonPressed(_ sender: UIButton) {
+        print("the sayItButtonPressed was pressed" , Date())
+        messageLabel.text = "👉 the Say It button was pressed!"
+    }
+    
 }
 
